@@ -1,0 +1,53 @@
+version: '3.1'
+intents:
+- affirm
+- ask_book_from_synopsis
+- ask_synopsis
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- provide_book_title
+- provide_synopsis
+- provide_unknown_book_title
+- provide_unknown_synopsis
+responses:
+  utter_greet:
+  - text: Hey! How can I help you with books today?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Goodbye! If you need assistance later, don't hesitate to return.
+  utter_iamabot:
+  - text: I am a bot, here to assist you with book-related queries.
+  utter_book_not_found:
+  - text: I'm sorry, but I couldn't find information about that book. Please check the title and try again.
+  utter_synopsis_not_matched:
+  - text: I couldn't match the provided synopsis with any known books. Please double-check the synopsis or try with another one.
+  utter_ask_book_title:
+  - text: Could you please provide the title of the book you're asking about?
+  utter_provide_synopsis:
+  - text: 'Sure! Here is the synopsis for "{book_title}": "{synopsis}"'
+  utter_ask_synopsis:
+  - text: What is the synopsis or a brief summary of the book you're interested in?
+  utter_provide_book_title:
+  - text: The book you're referring to is titled "{book_title}".
+  utter_ask_another_question:
+  - text: Do you have another question?
+actions:
+- action_provide_book_info
+- utter_ask_another_question
+- utter_greet
+- utter_did_that_help
+- utter_iamabot
+- action_ask_book_title
+- action_provide_synopsis
+- action_ask_synopsis
+- action_provide_book_title
+- utter_goodbye
+- action_gpt3_fallback
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
