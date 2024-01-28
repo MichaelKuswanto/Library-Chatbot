@@ -3,6 +3,7 @@ version: "3.1"
 stories:
 - story: Ask for book synopsis
   steps:
+  - action: utter_guide
   - intent: greet
   - action: utter_greet
   - intent: ask_synopsis
@@ -11,6 +12,7 @@ stories:
 
 - story: Ask for book title from synopsis
   steps:
+  - action: utter_guide
   - intent: greet
   - action: utter_greet
   - intent: ask_book_from_synopsis
@@ -19,6 +21,7 @@ stories:
 
 - story: Ask for book genre
   steps:
+  - action: utter_guide
   - intent: greet
   - action: utter_greet
   - intent: ask_genre
@@ -27,39 +30,13 @@ stories:
 
 - story: Ask for book author
   steps:
+  - action: utter_guide
   - intent: greet
   - action: utter_greet
   - intent: ask_author
   - action: action_provide_author
   - action: utter_ask_another_question
 
-# - story: happy path - get synopsis
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: ask_synopsis
-#   - action: action_provide_synopsis
-
-# - story: happy path - get book title from synopsis
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: ask_book_from_synopsis
-#   - action: action_provide_book_title
-
-# - story: sad path - unable to provide synopsis
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: ask_synopsis
-#   - action: utter_book_not_found
-
-# - story: sad path - unable to match book title from synopsis
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: ask_book_from_synopsis
-#   - action: utter_synopsis_not_matched
 
 - story: interactive_story - mixed queries
   steps:
@@ -200,7 +177,7 @@ stories:
     entities:
     - FAC: Perahu Kertas
     - book_title: Perahu Kertas
-  - action: utter_provide_author
+  - action: action_provide_author
   - action: utter_ask_another_question
   - intent: ask_synopsis
     entities:
@@ -222,3 +199,29 @@ stories:
     - book_title: Perahu Kertas
   - action: action_provide_author
   - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_author
+    entities:
+    - PERSON: Sewu Dino
+    - book_title: Sewu Dino
+  - action: action_provide_author
+  - action: utter_ask_another_question
+  - intent: ask_genre
+    entities:
+    - PERSON: Laskar Pelangi
+    - book_title: Laskar Pelangi
+  - action: action_provide_genre
+  - intent: goodbye
+  - action: utter_goodbye

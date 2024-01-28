@@ -2,6 +2,12 @@ version: "3.1"
 
 rules:
 
+- rule: Start conversation with guide
+  steps:
+  - action: utter_guide
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye

@@ -14,6 +14,16 @@ intents:
 - provide_unknown_book_title
 - provide_unknown_synopsis
 responses:
+  utter_guide:
+  - text: |
+      Welcome to Library Bot! I'm here to assist you with information about books. Here's what I can help you with:
+  - text: 1. Ask for a book synopsis.
+  - text: 2. Inquire about the author of a book.
+  - text: 3. Discover the genre of a book.
+  - text: 4. Find the title of a book from its synopsis.
+  - text: 5. Engage in a mixed conversation with various queries.
+  - text: |
+      Feel free to start by greeting me, and then ask about a specific book or explore different features.
   utter_greet:
   - text: Hey! How can I help you with books today?
   utter_did_that_help:
@@ -41,13 +51,13 @@ responses:
   utter_provide_author:
   - text: The author of "{book_title}" is {author}.
 actions:
-- utter_provide_author
-- action_provide_synopsis
-- action_provide_genre
-- utter_ask_another_question
-- utter_goodbye
 - utter_greet
 - action_provide_author
+- utter_ask_another_question
+- action_provide_genre
+- utter_goodbye
+- utter_provide_author
+- action_provide_synopsis
 - action_provide_book_title
 - action_provide_book_info
 - action_ask_book_title
