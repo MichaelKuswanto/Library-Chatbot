@@ -47,7 +47,6 @@
     t.me/nrp043739_bot
     ```
 
-- Setelah langkah tersebut maka anda sudah melakukan instalasi dan persiapan chatbot.
 
 
 ## License
