@@ -1,0 +1,224 @@
+version: "3.1"
+
+stories:
+- story: Ask for book synopsis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_synopsis
+  - action: action_provide_synopsis
+  - action: utter_ask_another_question
+
+- story: Ask for book title from synopsis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_book_from_synopsis
+  - action: action_provide_book_title
+  - action: utter_ask_another_question
+
+- story: Ask for book genre
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_genre
+  - action: action_provide_genre
+  - action: utter_ask_another_question
+
+- story: Ask for book author
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_author
+  - action: action_provide_author
+  - action: utter_ask_another_question
+
+# - story: happy path - get synopsis
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_synopsis
+#   - action: action_provide_synopsis
+
+# - story: happy path - get book title from synopsis
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_book_from_synopsis
+#   - action: action_provide_book_title
+
+# - story: sad path - unable to provide synopsis
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_synopsis
+#   - action: utter_book_not_found
+
+# - story: sad path - unable to match book title from synopsis
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_book_from_synopsis
+#   - action: utter_synopsis_not_matched
+
+- story: interactive_story - mixed queries
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_synopsis
+  - action: action_provide_synopsis
+  - action: utter_ask_another_question
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_book_from_synopsis
+    entities:
+    - PERSON: Steve Jobs
+  - action: action_provide_book_title
+  - action: utter_ask_another_question
+  - intent: ask_book_from_synopsis
+    entities:
+    - ORG: Aksi Massa
+  - intent: ask_synopsis
+    entities:
+    - book_title: Aksi Massa
+  - action: action_provide_synopsis
+  - action: utter_ask_another_question
+  - intent: ask_book_from_synopsis
+    entities:
+    - PERSON: Sewu Dino
+  - intent: ask_synopsis
+    entities:
+    - book_title: Sewu Dino
+  - action: action_provide_synopsis
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_synopsis
+    entities:
+    - PERSON: Steve Jobs
+    - book_title: Steve Jobs
+  - action: action_provide_synopsis
+  - action: utter_ask_another_question
+  - intent: ask_synopsis
+    entities:
+    - PERSON: Laskar Pelangi
+  - intent: ask_synopsis
+    entities:
+    - book_title: Laskar Pelangi
+  - action: action_provide_synopsis
+  - action: action_default_fallback
+  - intent: provide_unknown_synopsis
+    entities:
+    - FAC: Perahu Kertas
+  - intent: ask_synopsis
+    entities:
+    - book_title: Perahu Kertas
+  - action: action_provide_synopsis
+  - action: action_default_fallback
+  - intent: ask_synopsis
+    entities:
+    - ORG: Dear Nathan
+  - intent: ask_synopsis
+    entities:
+    - book_title: Dear Nathan
+  - action: action_provide_synopsis
+  - action: action_default_fallback
+  - intent: ask_synopsis
+    entities:
+    - ORG: Surat Kecil
+    - ORG: Tuhan
+  - intent: ask_synopsis
+    entities:
+    - book_title: Surat Kecil untuk Tuhan
+  - action: action_provide_synopsis
+  - action: action_default_fallback
+  - intent: ask_book_from_synopsis
+    entities:
+    - PERSON: Gadis Kretek
+  - intent: ask_synopsis
+    entities:
+    - book_title: Gadis Kretek
+  - action: action_provide_synopsis
+  - action: action_default_fallback
+  - intent: ask_book_from_synopsis
+  - intent: ask_synopsis
+    entities:
+    - book_title: Antares
+  - action: action_provide_synopsis
+  - action: action_default_fallback
+  - intent: ask_book_from_synopsis
+    entities:
+    - PERSON: Habis Gelap
+    - PERSON: Terbitlah Terang
+  - intent: ask_synopsis
+    entities:
+    - book_title: Habis Gelap Terbitlah Terang
+  - action: action_provide_synopsis
+  - action: utter_ask_another_question
+  - intent: ask_synopsis
+    entities:
+    - PERSON: Harry Potter
+    - ORG: The Chamber Of Secrects
+  - intent: ask_synopsis
+    entities:
+    - book_title: Harry Potter And The Chamber Of Secrects
+  - action: action_provide_synopsis
+  - action: utter_ask_another_question
+  - intent: ask_synopsis
+    entities:
+    - PERSON: Harry Potter
+    - ORG: The Chamber Of Secrets
+  - intent: ask_synopsis
+    entities:
+    - book_title: Harry Potter and The Chamber Of Secrets
+  - action: action_provide_synopsis
+  - action: utter_ask_another_question
+  - intent: ask_book_from_synopsis
+    entities:
+    - PERSON: Harry
+    - DATE: third year
+  - intent: ask_book_from_synopsis
+    entities:
+    - synopsis: Harry started his third year at hogward on less than pleasant note.
+  - action: action_provide_book_title
+  - action: utter_ask_another_question
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_author
+    entities:
+    - FAC: Perahu Kertas
+    - book_title: Perahu Kertas
+  - action: utter_provide_author
+  - action: utter_ask_another_question
+  - intent: ask_synopsis
+    entities:
+    - FAC: Perahu Kertas
+    - book_title: Perahu Kertas
+  - action: action_provide_synopsis
+  - action: utter_ask_another_question
+  - intent: deny
+  - intent: ask_genre
+    entities:
+    - PERSON: Steve Jobs
+    - book_title: Steve Jobs
+  - action: action_provide_genre
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: ask_author
+    entities:
+    - PERSON: Perahu Kertas
+    - book_title: Perahu Kertas
+  - action: action_provide_author
+  - intent: goodbye

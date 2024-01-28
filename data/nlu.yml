@@ -1,0 +1,252 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+    - Hello
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Goodbye
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I'm fine
+    - Fine
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so saad
+    - so sad
+    - not fine
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you doing
+- intent: ask_synopsis
+  examples: |
+    - What is the synopsis of [](book_title)?
+    - Can you tell me about [](book_title)?
+    - Provide the synopsis for [](book_title).
+    - What's the story of [](book_title)?
+    - Tell me about the book [](book_title).
+    - What is the synopsis of [Steve Jobs](book_title)?
+    - what is the synopsis of [Aksi Massa](book_title)
+    - What is the synopsis of [Sewu Dino](book_title)?
+    - What is the synopsis of [Dear Nathan](book_title)?
+    - What is the synopsis of [Harry Potter and the Prisoner of Azkaban](book_title)?
+    - What is the synopsis of [Harry Potter And The Chamber Of Secrets](book_title)?
+    - What is the synopsis of [B.J HABIBIE SI JENIUS : SEHIMPUN CERITA, CITA, DAN KARYA](book_title)?
+    - What is the synopsis of [BJ HABIBIE, THE POWER OF IDEAS](book_title)?
+    - What is the synopsis of [Perahu Kertas](book_title)?
+    - What is the synopsis of [Mencapai Indonesia Merdeka](book_title)?
+    - What is the synopsis of [Laskar Pelangi](book_title)?
+    - What is the synopsis of [Antares](book_title)?
+    - What is the synopsis of [Habis Gelap Terbitlah Terang](book_title)?
+    - What is the synopsis of [Dia Adalah Dilanku Tahun 1990](book_title)?
+    - What is the synopsis of [Gadis Kretek](book_title)?
+    - What is the synopsis of [Surat Kecil untuk Tuhan](book_title)?
+    - What is the synopsis of [Kisah Hidupku Andy Noya](book_title)?
+    - Can you tell me about [Steve Jobs](book_title)?
+    - Can you give me the synopsis of [Habis Gelap Terbitlah Terang](book_title)?
+    - Tell me the synopsis of [Harry Potter and The Chamber Of Secrets](book_title)
+    - What is the synopsis of [Aksi Massa](book_title)?
+    - What can you tell me about [Sewu Dino](book_title)?
+    - Give me the synopsis for [Dear Nathan](book_title).
+    - Explain the story of [Harry Potter and the Prisoner of Azkaban](book_title).
+    - Share details about [B.J HABIBIE SI JENIUS : SEHIMPUN CERITA, CITA, DAN KARYA](book_title).
+    - Describe the plot of [Perahu Kertas](book_title).
+    - Can you provide information about [Mencapai Indonesia Merdeka](book_title)?
+    - Summarize [Laskar Pelangi](book_title) for me.
+    - Tell me about the content of [Antares](book_title).
+    - What's the storyline of [Dia Adalah Dilanku Tahun 1990](book_title)?
+    - Provide a brief overview of [Gadis Kretek](book_title).
+    - Share the synopsis of [Surat Kecil untuk Tuhan](book_title).
+    - Explain the book [Kisah Hidupku Andy Noya](book_title).
+    - Tell me the synopsis of [Harry Potter and The Chamber Of Secrets](book_title).
+    - What is the story behind [Aksi Massa](book_title)?
+    - Provide an overview of [Sewu Dino](book_title).
+    - Give me a brief summary of [Dear Nathan](book_title).
+    - Elaborate on the plot of [Harry Potter and the Prisoner of Azkaban](book_title).
+    - Share insights into [B.J HABIBIE SI JENIUS : SEHIMPUN CERITA, CITA, DAN KARYA](book_title).
+    - Briefly describe [Perahu Kertas](book_title).
+    - What is the central theme of [Mencapai Indonesia Merdeka](book_title)?
+    - Share key points from [Laskar Pelangi](book_title).
+    - Explain the concept of [Antares](book_title).
+    - Share details about the characters in [Dia Adalah Dilanku Tahun 1990](book_title).
+    - What cultural aspects are explored in [Gadis Kretek](book_title)?
+    - Briefly summarize [Surat Kecil untuk Tuhan](book_title).
+    - Highlight the main events in [Kisah Hidupku Andy Noya](book_title).
+    - What influenced the creation of [Steve Jobs](book_title)?
+    - Can you provide insights into [Habis Gelap Terbitlah Terang](book_title)?
+    - Tell me more about [Harry Potter and The Chamber Of Secrets](book_title).
+    - What is the synopsis of [Perahu Kertas](book_title)?
+- intent: ask_genre
+  examples: |
+    - What is the genre of [](book_title)?
+    - Can you tell me the genre of [](book_title)?
+    - Provide the genre for [](book_title).
+    - What genre does [](book_title) belong to?
+    - Tell me the book genre of [](book_title).
+    - What is the genre of [Steve Jobs](book_title)?
+    - What is the genre of [Aksi Massa](book_title)?
+    - Tell me the genre of [Sewu Dino](book_title).
+    - What genre does [Dear Nathan](book_title) fall into?
+    - What is the genre of [Harry Potter and the Prisoner of Azkaban](book_title)?
+    - What genre is [Harry Potter And The Chamber Of Secrets](book_title)?
+    - What genre does [B.J HABIBIE SI JENIUS : SEHIMPUN CERITA, CITA, DAN KARYA](book_title) belong to?
+    - What is the genre of [BJ HABIBIE, THE POWER OF IDEAS](book_title)?
+    - Can you tell me the genre of [Perahu Kertas](book_title)?
+    - What genre does [Mencapai Indonesia Merdeka](book_title) belong to?
+    - Tell me the genre of [Laskar Pelangi](book_title).
+    - What is the genre of [Antares](book_title)?
+    - What genre does [Habis Gelap Terbitlah Terang](book_title) belong to?
+    - Tell me the genre of [Dia Adalah Dilanku Tahun 1990](book_title).
+    - What is the genre of [Gadis Kretek](book_title)?
+    - What genre does [Surat Kecil untuk Tuhan](book_title) belong to?
+    - Tell me the genre of [Kisah Hidupku Andy Noya](book_title).
+    - What genre does [Steve Jobs](book_title) fall into?
+    - What is the genre of [Habis Gelap Terbitlah Terang](book_title)?
+    - Tell me the genre of [Harry Potter and The Chamber Of Secrets](book_title).
+    - What genre does [Aksi Massa](book_title) belong to?
+    - Can you tell me the genre of [Sewu Dino](book_title)?
+    - Provide the genre for [Dear Nathan](book_title).
+    - What genre does [Harry Potter and the Prisoner of Azkaban](book_title) fall into?
+    - Tell me the book genre of [B.J HABIBIE SI JENIUS : SEHIMPUN CERITA, CITA, DAN KARYA](book_title).
+    - What is the genre of [Perahu Kertas](book_title)?
+    - Provide the genre for [Laskar Pelangi](book_title).
+    - What genre does [Antares](book_title) fall into?
+    - Tell me the book genre of [Habis Gelap Terbitlah Terang](book_title).
+    - What is the genre of [Dia Adalah Dilanku Tahun 1990](book_title)?
+    - Tell me the genre of [Gadis Kretek](book_title).
+    - Provide the genre for [Kisah Hidupku Andy Noya](book_title).
+    - Tell me the genre of [Habis Gelap Terbitlah Terang](book_title).
+    - What is the genre of [Harry Potter and The Chamber Of Secrets](book_title).
+    - what is the genre of [Steve Jobs](book_title)?
+- intent: ask_author
+  examples: |
+    - Who is the author of [](book_title)?
+    - Can you tell me the author of [](book_title)?
+    - Provide the author for [](book_title).
+    - Who wrote [](book_title)?
+    - Tell me about the author of [](book_title).
+    - What is the author of [Steve Jobs](book_title)?
+    - Who is the author of [Aksi Massa](book_title)?
+    - Tell me about the author of [Sewu Dino](book_title).
+    - Who wrote [Dear Nathan](book_title)?
+    - Tell me about the author of [Harry Potter and the Prisoner of Azkaban](book_title).
+    - Who is the author of [Harry Potter And The Chamber Of Secrets](book_title)?
+    - Who wrote [B.J HABIBIE SI JENIUS : SEHIMPUN CERITA, CITA, DAN KARYA](book_title)?
+    - Tell me about the author of [BJ HABIBIE, THE POWER OF IDEAS](book_title).
+    - What is the author of [Perahu Kertas](book_title)?
+    - Who wrote [Mencapai Indonesia Merdeka](book_title)?
+    - Tell me about the author of [Laskar Pelangi](book_title).
+    - Who is the author of [Antares](book_title)?
+    - Tell me about the author of [Habis Gelap Terbitlah Terang](book_title).
+    - Who wrote [Dia Adalah Dilanku Tahun 1990](book_title)?
+    - Tell me about the author of [Gadis Kretek](book_title).
+    - Who is the author of [Surat Kecil untuk Tuhan](book_title)?
+    - Tell me about the author of [Kisah Hidupku Andy Noya](book_title).
+    - Who wrote [Steve Jobs](book_title)?
+    - What is the author of [Habis Gelap Terbitlah Terang](book_title)?
+    - Tell me about the author of [Harry Potter and The Chamber Of Secrets](book_title).
+    - Can you tell me the author of [Sewu Dino](book_title)?
+    - Provide the author for [Dear Nathan](book_title).
+    - Who wrote [Harry Potter and the Prisoner of Azkaban](book_title)?
+    - Tell me about the author of [B.J HABIBIE SI JENIUS : SEHIMPUN CERITA, CITA, DAN KARYA](book_title).
+    - Who is the author of [Perahu Kertas](book_title)?
+    - Tell me about the author of [Mencapai Indonesia Merdeka](book_title).
+    - Who wrote [Laskar Pelangi](book_title)?
+    - What is the author of [Antares](book_title)?
+    - Who is the author of [Dia Adalah Dilanku Tahun 1990](book_title)?
+    - Who wrote [Surat Kecil untuk Tuhan](book_title)?
+    - Who is the author of [Steve Jobs](book_title)?
+    - Who is the author of [Perahu Kertas](book_title)?
+    - Who write [Perahu Kertas](book_title)?
+- intent: ask_book_from_synopsis
+  examples: |
+    - Which book has the following synopsis: [](synopsis)?
+    - Find the book with the synopsis: [](synopsis).
+    - Identify the book from the given synopsis: [](synopsis).
+    - What book is described by this synopsis: [](synopsis)?
+    - Which book has the following synopsis: [Harry started his third year at hogward on less than pleasant note.](synopsis)
+- intent: provide_unknown_book_title
+  examples: |
+    - I don't know the title.
+    - The title is not available.
+    - I'm unsure about the title.
+    - Unknown book title.
+    - I don't have information about the title.
+- intent: provide_unknown_synopsis
+  examples: |
+    - I don't have information about this synopsis.
+    - The synopsis is not available.
+    - I'm not familiar with this synopsis.
+    - Unknown synopsis.
+    - I can't provide details about the synopsis.
