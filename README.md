@@ -2,7 +2,7 @@
 
 - Download atau melakukan git clone terhadap file github yang ada
     ```
-    git clone https://github.com/shamspias/The-Rasa-Answer-Machine-GPT3.git
+    git clone https://github.com/MichaelKuswanto/Library-Chatbot.git
     ```
 
 - Masuk ke dalam project yang sudah di download atau di gitclone
